@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row" id="jsPDFButton">
+    <div class="col-12">
+
+    </div>
+</div>
+
+<div class="row" id="jsPDFContent">
+    <div class="col-12">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor augue, viverra a lectus at, sodales lacinia neque. Cras tellus odio, dapibus sed cursus id, dictum rutrum sem. Suspendisse leo orci, consectetur vel diam et, ornare dictum elit. Proin tincidunt sed massa semper vestibulum. Suspendisse potenti. Nullam aliquet et est a rhoncus. Vivamus ac iaculis purus, ut aliquam orci. Nullam aliquet enim quis mi euismod convallis. Morbi porttitor, enim in suscipit dapibus, velit dui ornare orci, quis maximus sapien turpis non risus. Cras consequat, ligula ut commodo fermentum, lacus massa fringilla neque, et euismod lorem sapien in nisl. Aenean faucibus enim eget commodo vulputate. Maecenas et felis dapibus, cursus dui id, fermentum turpis. Praesent ultrices semper neque, id sollicitudin arcu. Etiam cursus pellentesque odio, sed tincidunt dolor ultricies nec.
+
+            Duis consequat volutpat gravida. Sed lacinia sem et mattis lobortis. Curabitur bibendum, orci ut molestie molestie, nibh ipsum interdum dolor, quis interdum tortor metus vitae metus. Pellentesque pharetra venenatis augue, consequat bibendum ipsum cursus id. Sed quis erat sagittis, molestie ante sed, molestie eros. Aliquam egestas justo non orci ultrices lobortis. Donec faucibus neque ac imperdiet venenatis. Mauris suscipit eget tortor eu sodales. Praesent ante mauris, mollis placerat laoreet sit amet, aliquet quis dolor. Aenean sodales felis et sodales mollis. Suspendisse convallis dui eu eros pharetra hendrerit. Sed viverra, magna eu semper facilisis, velit sem consectetur arcu, in efficitur lorem lectus et lorem. Sed egestas, est a ornare gravida, dolor ligula congue arcu, nec congue quam lacus nec augue. Praesent ut est et velit auctor molestie vel ultricies nisi. Integer consequat ligula sit amet est sodales, id tincidunt diam feugiat. Quisque ultrices purus tellus.
+
+            Curabitur metus est, iaculis vitae felis vel, condimentum suscipit purus. Nullam hendrerit, lacus at vulputate convallis, dui purus ultrices tortor, sit amet euismod nisl elit sed ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sollicitudin, velit ut venenatis gravida, dui ex feugiat lacus, in tincidunt velit magna id massa. Quisque hendrerit bibendum dolor et tempus. Etiam vel odio feugiat, hendrerit sem ac, ultrices justo. In sit amet malesuada augue, in vulputate quam. Nunc pulvinar enim vitae nisi sollicitudin tristique. Phasellus commodo elit non leo egestas, ut maximus velit sollicitudin. Sed luctus at ante non congue. Donec vitae posuere est, ut fermentum metus. Vivamus tempus rutrum dui, at fermentum mi porta vel.
+
+            Phasellus vehicula mattis elit, a placerat augue bibendum in. Morbi vel elit neque. Duis eget felis ut orci varius hendrerit ac nec lacus. Sed vulputate non elit id convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean vitae ultricies mauris, non dignissim ipsum. Sed accumsan velit et orci rutrum, quis porttitor odio cursus. Maecenas id ex sed mauris rutrum congue id et lacus. Aliquam convallis interdum mollis. Cras laoreet, turpis id volutpat viverra, libero nisl euismod est, vitae hendrerit sem ipsum quis enim. Aliquam finibus metus quis urna volutpat ultrices. Nam gravida ultrices felis. Duis a tempor purus, quis auctor turpis.
+
+            
+        </p>
+        <p>
+            Donec ante sem, maximus commodo lacus vitae, porttitor venenatis sem. Nullam vitae egestas arcu, pretium aliquet ex. Donec ac congue lorem. Nullam imperdiet mollis nisi, non sodales urna posuere id. Nulla egestas vitae quam sit amet luctus. Donec eget facilisis dui. Curabitur lacinia facilisis convallis. Praesent hendrerit tincidunt elit eget mattis.
+        </p>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.0/jspdf.min.js" integrity="sha512-pZmE8nx/gdufIRZ9DdgsipK4ocMbdq6zU2epbECb4/iwu9bHfN3aDYmOiVNC8SHk90uWi03o1ziB6JEd6/3VQA==" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+
+            function jsPDFUserMetrics() {
+
+                console.log('jsPDF: start');
+
+                var doc = new jsPDF();
+
+                //set font size on the document;
+                doc.setFontSize(16);
+
+                //set properties on the document
+                doc.setProperties({
+                    title: 'Test',
+                    subject: 'Test',
+                    author: 'Test'
+                });
+
+                doc.save('test.pdf');
+
+                console.log('jsPDF: end');
+            }
+
+        });
+    </script>
+}
